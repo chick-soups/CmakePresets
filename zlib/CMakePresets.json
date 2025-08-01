@@ -1,0 +1,44 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "x64-windows",
+            "displayName": "x64-windows",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "D:/libraries/zlib/${presetName}",
+                "BUILD_SHARED_LIBS": true,
+                "ZLIB_BUILD_EXAMPLES": true
+            }
+        },
+        {
+            "name": "arm64-android",
+            "description": "arm64-android",
+            "displayName": "",
+            "inherits": [
+                "x64-windows"
+            ],
+            "generator": "Ninja",
+            "cacheVariables": {
+                "ANDROID_NDK": "$env{ANDROID_NDK_HOME}",
+                "ANDROID_PLATFORM": "android-24",
+                "ANDROID_ABI": "arm64-v8a",
+                "CMAKE_TOOLCHAIN_FILE": "$env{ANDROID_NDK_HOME}/build/cmake/android.toolchain.cmake",
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "x64-windows-build",
+            "configurePreset": "x64-windows",
+            "configuration": "Release"
+        },
+        {
+            "name": "arm64-android-build",
+            "configurePreset": "arm64-android",
+            "configuration": "Release"
+        }
+    ]
+}

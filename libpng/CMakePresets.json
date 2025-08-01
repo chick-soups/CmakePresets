@@ -1,0 +1,26 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "x64-windows",
+            "displayName": "Visual Studio 生成工具 2022 Release - amd64",
+            "description": "Using compilers for Visual Studio 17 2022 (x64 architecture)",
+            "generator": "Visual Studio 17 2022",
+            "toolset": "host=x64",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/out/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_INSTALL_PREFIX": "D:/libraries/libpng/${presetName}",
+                "ZLIB_ROOT":"D:/libraries/zlib/${presetName}"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "x64-windows-Release",
+            "displayName": "Visual Studio 生成工具 2022 Release - amd64 - Release",
+            "configurePreset": "x64-windows",
+            "configuration": "Release"
+        }
+    ]
+}
