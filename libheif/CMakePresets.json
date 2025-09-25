@@ -193,8 +193,8 @@
               "X265_ROOT":"D:/libraries/x265/${presetName}",
               "LIBDE265_ROOT":"D:/libraries/libde265/${presetName}",
               "JPEG_ROOT":"D:/libraries/libjpeg-turbo/${presetName}",
-              "PNG_ROOT":"D:/libraries/lpng1650/${presetName}",
-              "ZLIB_ROOT":"D:/libraries/zlib-1.2.13/${presetName}"
+              "PNG_ROOT":"D:/libraries/libpng/${presetName}",
+              "ZLIB_ROOT":"D:/libraries/zlib/${presetName}"
             }
         }
     ]
