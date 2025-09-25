@@ -32,7 +32,7 @@
     ],
     "buildPresets": [
         {
-            "name": "x64-windows-debug",
+            "name": "x64-windows-Release",
             "displayName": "Visual Studio 生成工具 2022 Release - amd64 - Debug",
             "configurePreset": "x64-windows",
             "configuration": "Debug"
